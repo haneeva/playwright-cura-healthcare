@@ -1,0 +1,23 @@
+{
+  "name": "playwright-cura-healthcare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haneeva/playwright-cura-healthcare.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haneeva/playwright-cura-healthcare/issues"
+  },
+  "homepage": "https://github.com/haneeva/playwright-cura-healthcare#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.6",
+    "dotenv": "^18.0.9"
+  }
+}
