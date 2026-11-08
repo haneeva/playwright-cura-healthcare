@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'mcr.microsoft.com/playwright:v1.64.1-jammy'
-        }
-    }
+    agent any
 
     options {
         timeout(time: 30, unit: 'MINUTES')
@@ -11,19 +7,20 @@ pipeline {
     }
 
     environment {
-        CI       = 'true'
+        CI = 'true'
     }
 
     stages {
         stage('Install') {
             steps {
-                sh 'npm ci'
+                bat 'npm ci'
+                bat 'npx playwright install'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'npx playwright test'
+                bat 'npx playwright test'
             }
         }
     }
